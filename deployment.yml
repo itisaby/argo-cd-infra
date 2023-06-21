@@ -14,9 +14,7 @@ spec:
       labels:
         app: app-service
     spec:
-      imagePullSecrets:
-      - name: ecr-creds
       containers:
       - name: app-service
-        image: hello-world:latest
+        image: nginx
         imagePullPolicy: Always
