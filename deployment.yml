@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: app-service
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: app-service
+  template:
+    metadata:
+      labels:
+        app: app-service
+    spec:
+      imagePullSecrets:
+      - name: ecr-creds
+      containers:
+      - name: app-service
+        image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/app-service:latest
+        imagePullPolicy: Always
