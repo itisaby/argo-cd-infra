@@ -18,5 +18,5 @@ spec:
       - name: ecr-creds
       containers:
       - name: app-service
-        image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/app-service:latest
+        image: hello-world:latest
         imagePullPolicy: Always
