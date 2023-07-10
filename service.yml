@@ -4,7 +4,7 @@ metadata:
   name: app-service
 spec:
   #this defines which pods are part of this service
-  #service becomes network endpoint for either other servoces or external users to connect.
+  #service becomes a network endpoint for either other services or external users to connect. Checking with Meshery
   selector:
     app: app-service
   ports:
